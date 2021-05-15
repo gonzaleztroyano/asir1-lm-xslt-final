@@ -1,0 +1,320 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+
+<!-- ================================== -->
+<!--           Definimos Raiz           -->
+<!-- ================================== -->
+<xsd:element name="inmuebles">
+	<xsd:complexType>
+		<xsd:sequence>
+			<xsd:element ref="inmueble" maxOccurs="unbounded"/>
+		</xsd:sequence>
+	</xsd:complexType>
+</xsd:element>
+
+<!-- ====================================== -->
+<!--         Definimos TIPOS SIMPLES        -->
+<!-- ====================================== -->
+<xsd:simpleType name="TipoSimple">
+	<xsd:restriction base="xsd:string">
+		<xsd:minLength value="1"/>
+		<xsd:maxLength value="150"/>
+	</xsd:restriction>
+</xsd:simpleType>
+<xsd:simpleType name="TipoPrecio">
+	<xsd:restriction base="xsd:decimal">
+		<xsd:totalDigits value="10"/>
+		<xsd:fractionDigits value="2"/>
+	</xsd:restriction>
+</xsd:simpleType>
+<xsd:simpleType name="TipoMetros2">
+	<xsd:restriction base="xsd:positiveInteger">
+		<xsd:totalDigits value="5"/>
+	</xsd:restriction>
+</xsd:simpleType>
+<xsd:simpleType name="TipoCCAA">
+	<xsd:restriction base="xsd:string">
+		<xsd:enumeration value="Andalucia"/>
+		<xsd:enumeration value="Aragon"/>
+		<xsd:enumeration value="Asturias"/>
+		<xsd:enumeration value="Baleares"/>
+		<xsd:enumeration value="Canarias"/>
+		<xsd:enumeration value="Cantabria"/>
+		<xsd:enumeration value="Castilla-LaMancha"/>
+		<xsd:enumeration value="Castilla y Leon"/>
+		<xsd:enumeration value="Catalunya"/>
+		<xsd:enumeration value="Comunidad Valenciana"/>
+		<xsd:enumeration value="Extremadura"/>
+		<xsd:enumeration value="Galicia"/>
+		<xsd:enumeration value="La Rioja"/>
+		<xsd:enumeration value="Comunidad de Madrid"/>
+		<xsd:enumeration value="Murcia"/>
+		<xsd:enumeration value="Navarra"/>
+		<xsd:enumeration value="Pais Vasco"/>
+	</xsd:restriction>
+</xsd:simpleType>
+<xsd:simpleType name="TipoCodigoPostal">
+	<xsd:restriction base="xsd:positiveInteger">
+		<xsd:totalDigits value="5"/>
+	</xsd:restriction>
+</xsd:simpleType>
+<xsd:simpleType name="TipoLuminosidad">
+	<xsd:restriction base="xsd:string">
+		<xsd:enumeration value="Alta"/>
+		<xsd:enumeration value="Media"/>
+		<xsd:enumeration value="Baja"/>
+		<xsd:enumeration value="Nula"/>
+	</xsd:restriction>
+</xsd:simpleType>
+<xsd:simpleType name="TipoBooleano">
+	<xsd:restriction base="xsd:string">
+		<xsd:enumeration value="Si"/>
+		<xsd:enumeration value="No"/>
+	</xsd:restriction>
+</xsd:simpleType>
+<xsd:simpleType name="TipoCalif">
+	<xsd:restriction base="xsd:string">
+		<xsd:enumeration value="A"/>
+		<xsd:enumeration value="B"/>
+		<xsd:enumeration value="C"/>
+		<xsd:enumeration value="D"/>
+		<xsd:enumeration value="E"/>
+		<xsd:enumeration value="F"/>
+		<xsd:enumeration value="G"/>
+	</xsd:restriction>
+</xsd:simpleType>
+<xsd:simpleType name="TipoTipoInmueble">
+	<xsd:restriction base="xsd:string">
+		<xsd:enumeration value="Vivienda"/>
+		<xsd:enumeration value="Local"/>
+		<xsd:enumeration value="Almacen"/>
+		<xsd:enumeration value="Suelo"/>
+	</xsd:restriction>
+</xsd:simpleType>
+<xsd:simpleType name="TipoTelefono">
+	<xsd:restriction base="xsd:positiveInteger">
+		<xsd:totalDigits value="9"/>
+	</xsd:restriction>
+</xsd:simpleType>
+<xsd:simpleType name="TipoNIF">
+<xsd:restriction base="xsd:string">
+		<xsd:minLength value="9"/>
+		<xsd:maxLength value="9"/>
+	</xsd:restriction>
+</xsd:simpleType>
+<xsd:simpleType name="TipoTipoPropi">
+	<xsd:restriction base="xsd:string">
+		<xsd:enumeration value="Particular"/>
+		<xsd:enumeration value="Empresa"/>
+	</xsd:restriction>
+</xsd:simpleType>
+<xsd:simpleType name="TipoEleccionDisponibilidad">
+	<xsd:restriction base="xsd:string">
+		<xsd:enumeration value="Completa"/>
+		<xsd:enumeration value="Nunca"/>
+		<xsd:enumeration value="Ocasionalmente"/>
+	</xsd:restriction>
+</xsd:simpleType>
+<xsd:simpleType name="TipoDia">
+	<xsd:restriction base="xsd:positiveInteger">
+		<xsd:minInclusive value="1"/>
+		<xsd:maxInclusive value="31"/>
+	</xsd:restriction>
+</xsd:simpleType>
+<xsd:simpleType name="TipoMes">
+	<xsd:restriction base="xsd:string">
+		<xsd:enumeration value="Enero"/>
+		<xsd:enumeration value="Febrero"/>
+		<xsd:enumeration value="Marzo"/>
+		<xsd:enumeration value="Abril"/>
+		<xsd:enumeration value="Mayo"/>
+		<xsd:enumeration value="Junio"/>
+		<xsd:enumeration value="Julio"/>
+		<xsd:enumeration value="Agosto"/>
+		<xsd:enumeration value="Septiembre"/>
+		<xsd:enumeration value="Octubre"/>
+		<xsd:enumeration value="Noviembre"/>
+		<xsd:enumeration value="Diciembre"/>
+	</xsd:restriction>
+</xsd:simpleType>
+<xsd:simpleType name="TipoAnio">
+	<xsd:restriction base="xsd:integer">
+		<xsd:totalDigits value="4"/>
+	</xsd:restriction>
+</xsd:simpleType>
+<!-- ====================================== -->
+<!--   Definimos ELEMENTOS DE TIPO SIMPLES  -->
+<!-- ====================================== -->
+<xsd:element name="forma_adquisicion" type="TipoSimple"/>
+<xsd:element name="precio" type="TipoPrecio"/>
+<xsd:element name="metros2" type="TipoMetros2"/>
+<xsd:element name="calle" type="TipoSimple"/>
+<xsd:element name="localidad" type="TipoSimple"/>
+<xsd:element name="CCAA" type="TipoCCAA"/>
+<xsd:element name="cod_postal" type="TipoCodigoPostal"/>
+<xsd:element name="n_habitaciones" type="xsd:positiveInteger"/>
+<xsd:element name="n_banios" type="xsd:positiveInteger"/>
+<xsd:element name="luminosidad" type="TipoLuminosidad"/>
+<xsd:element name="terraza" type="TipoBooleano"/>
+<xsd:element name="amueblado" type="TipoBooleano"/>
+<xsd:element name="calif_energetica" type="TipoCalif"/>
+<xsd:element name="nombre" type="TipoSimple"/>
+<xsd:element name="apellidos" type="TipoSimple"/>
+<xsd:element name="telefono" type="TipoTelefono"/>
+<xsd:element name="email" type="TipoSimple"/>
+<xsd:element name="nif" type="TipoNIF"/>
+<xsd:element name="cif" type="TipoNIF"/>
+<xsd:element name="scan_data" type="xsd:string"/>
+<xsd:element name="dia" type="TipoDia"/>
+<xsd:element name="mes" type="TipoMes"/>
+<xsd:element name="anio" type="TipoAnio"/>
+<xsd:element name="cantidad" type="TipoPrecio"/>
+<xsd:element name="hora" type="TipoSimple"/>
+<xsd:element name="cliente" type="TipoSimple"/>
+<!-- ====================================== -->
+<!--           Definimos ATRIBUTOS          -->
+<!-- ====================================== -->
+<xsd:attribute name="desc" type="TipoSimple"/>
+<xsd:attribute name="tipo_inmueble" type="TipoTipoInmueble"/>
+<xsd:attribute name="id_inmueble" type="xsd:ID"/>
+<xsd:attribute name="id_propi" type="TipoSimple"/>
+<xsd:attribute name="tipo_propi" type="TipoTipoPropi"/>
+<xsd:attribute name="id_emple" type="TipoSimple"/>
+<xsd:attribute name="id_puja" type="xsd:ID"/>
+<!-- ====================================== -->
+<!--        Definimos TIPOS COMPLEJOS       -->
+<!-- ====================================== -->
+<xsd:complexType name="TipoInmueble">
+	<xsd:sequence>
+		<xsd:element ref="datos_inmueble"/>
+		<xsd:element ref="datos_propi"/>
+		<xsd:element ref="datos_gestor"/>
+		<xsd:element ref="datos_subasta" minOccurs="0"/>
+	</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="TipoDatos_Inmueble">
+	<xsd:sequence>
+		<xsd:element ref="forma_adquisicion"/>
+		<xsd:element ref="precio"/>
+		<xsd:element ref="metros2"/>
+		<xsd:element ref="ubicacion"/>
+		<xsd:element ref="descripcion"/>
+		<xsd:element ref="fotos_inmu"/>
+	</xsd:sequence>
+	<xsd:attribute ref="tipo_inmueble" use="required"/>
+	<xsd:attribute ref="id_inmueble" use="required"/>
+</xsd:complexType>
+<xsd:complexType name="TipoUbicacion">
+	<xsd:sequence>
+		<xsd:element ref="calle"/>
+		<xsd:element ref="localidad"/>
+		<xsd:element ref="CCAA"/>
+		<xsd:element ref="cod_postal"/>
+	</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="TipoDescripcion">
+	<xsd:sequence>
+		<xsd:element ref="n_habitaciones"/>
+		<xsd:element ref="n_banios"/>
+		<xsd:element ref="luminosidad"/>
+		<xsd:element ref="terraza"/>
+		<xsd:element ref="amueblado"/>
+		<xsd:element ref="calif_energetica"/>
+	</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="TipoFotos_inmu">
+	<xsd:sequence>
+		<xsd:element ref="foto_inmu" maxOccurs="15"/>
+	</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="TipoFoto_inmu" mixed="true">
+	<xsd:attribute ref="desc" use="optional"/>
+</xsd:complexType>
+<xsd:complexType name="TipoDatos_Propi">
+	<xsd:sequence>
+		<xsd:element ref="nombre"/>
+		<xsd:element ref="apellidos"/>
+		<xsd:element ref="datos_contacto"/>
+		<xsd:choice>
+			<xsd:element ref="datos_particular"/>
+			<xsd:element ref="datos_empresa"/>
+		</xsd:choice>
+	</xsd:sequence>
+	<xsd:attribute ref="tipo_propi" use="required"/>
+	<xsd:attribute ref="id_propi" use="required"/>
+</xsd:complexType>
+<xsd:complexType name="TipoDatos_Contacto">
+	<xsd:sequence>
+		<xsd:element ref="telefono"/>
+		<xsd:element ref="email"/>
+	</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="TipoDatos_Particular">
+	<xsd:sequence>
+		<xsd:element ref="nif"/>
+		<xsd:element ref="scan_data"/>
+	</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="TipoDatos_Empresa">
+	<xsd:sequence>
+		<xsd:element ref="cif"/>
+		<xsd:element ref="scan_data"/>
+	</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="TipoDatos_Gestor">
+	<xsd:sequence>
+		<xsd:element ref="datos_emple"/>
+		<xsd:element ref="foto_emple"/>
+		<xsd:element ref="disponibilidad"/>
+	</xsd:sequence>
+	<xsd:attribute ref="id_emple" use="required"/>
+</xsd:complexType>
+<xsd:complexType name="TipoDisponibilidad">
+	<xsd:sequence>
+		<xsd:element name="l-v-m" type="TipoEleccionDisponibilidad"/>
+		<xsd:element name="l-v-t" type="TipoEleccionDisponibilidad"/>
+		<xsd:element name="s-m" type="TipoEleccionDisponibilidad"/>
+	</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="TipoDatos_Subasta">
+	<xsd:sequence>
+		<xsd:element ref="puja" maxOccurs="unbounded"/>
+	</xsd:sequence>
+</xsd:complexType>
+<xsd:complexType name="TipoPuja">
+	<xsd:sequence>
+		<xsd:element ref="cliente"/>
+		<xsd:element ref="timestamp"/>
+		<xsd:element ref="cantidad"/>
+	</xsd:sequence>
+	<xsd:attribute ref="id_puja" use="required"/>
+</xsd:complexType>
+<xsd:complexType name="TipoTimestamp">
+	<xsd:sequence>
+		<xsd:element ref="dia"/>
+		<xsd:element ref="mes"/>
+		<xsd:element ref="anio"/>
+		<xsd:element ref="hora"/>
+	</xsd:sequence>
+</xsd:complexType>
+<!-- ====================================== -->
+<!--  Definimos ELEMENTOS DE TIPO COMPLEJO  -->
+<!-- ====================================== -->
+<xsd:element name="inmueble" type="TipoInmueble"/>
+<xsd:element name="datos_inmueble" type="TipoDatos_Inmueble"/>
+<xsd:element name="ubicacion" type="TipoUbicacion"/>
+<xsd:element name="descripcion" type="TipoDescripcion"/>
+<xsd:element name="fotos_inmu" type="TipoFotos_inmu"/>
+<xsd:element name="foto_inmu" type="TipoFoto_inmu"/>
+<xsd:element name="datos_contacto" type="TipoDatos_Contacto"/>
+<xsd:element name="datos_propi" type="TipoDatos_Propi"/>
+<xsd:element name="datos_particular" type="TipoDatos_Particular"/>
+<xsd:element name="datos_empresa" type="TipoDatos_Empresa"/>
+<xsd:element name="datos_gestor" type="TipoDatos_Gestor"/>
+<xsd:element name="datos_emple" type="TipoDatos_Contacto"/>
+<xsd:element name="foto_emple" type="TipoFoto_inmu"/>
+<xsd:element name="disponibilidad" type="TipoDisponibilidad"/>
+<xsd:element name="puja" type="TipoPuja"/>
+<xsd:element name="datos_subasta" type="TipoDatos_Subasta"/>
+<xsd:element name="timestamp" type="TipoTimestamp"/>
+</xsd:schema>

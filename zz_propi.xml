@@ -1,0 +1,62 @@
+<propietariosas>
+	<datos_propi id_propi="p1" tipo_propi="Particular">
+		<nombre>Marta</nombre>
+		<apellidos>González Margarita</apellidos>
+		<datos_contacto>
+			<telefono>911257111</telefono>
+			<email>marta@correo.com</email>
+		</datos_contacto>
+		<datos_particular>
+			<nif>66666666A</nif>
+			<scan_data>./content/66666666A.jpg</scan_data>
+		</datos_particular>
+	</datos_propi>
+	<datos_propi id_propi="p2" tipo_propi="Particular">
+		<nombre>Pepito</nombre>
+		<apellidos>Pérez García</apellidos>
+		<datos_contacto>
+			<telefono>911111111</telefono>
+			<email>pepito@correo.com</email>
+		</datos_contacto>
+		<datos_particular>
+			<nif>55555555A</nif>
+			<scan_data>./content/55555555A.png</scan_data>
+		</datos_particular>
+	</datos_propi>
+	<datos_propi id_propi="p3" tipo_propi="Particular">
+		<nombre>Manolito</nombre>
+		<apellidos>García Aguado</apellidos>
+		<datos_contacto>
+			<telefono>919987885</telefono>
+			<email>manolito@correo.com</email>
+		</datos_contacto>
+		<datos_particular>
+			<nif>66668666A</nif>
+			<scan_data>./content/66668666A.jpg</scan_data>
+		</datos_particular>
+	</datos_propi>
+	<datos_propi id_propi="p4" tipo_propi="Particular">
+		<nombre>Ana María Margarita</nombre>
+		<apellidos>Todos los Santos, de</apellidos>
+		<datos_contacto>
+			<telefono>911257111</telefono>
+			<email>margaritamaria@correo.com</email>
+		</datos_contacto>
+		<datos_particular>
+			<nif>88888888A.jpg</nif>
+			<scan_data>./content/88888888A.jpg</scan_data>
+		</datos_particular>
+	</datos_propi>
+	<datos_propi id_propi="p4" tipo_propi="Particular">
+		<nombre>Ana María Margarita</nombre>
+		<apellidos>Todos los Santos, de</apellidos>
+		<datos_contacto>
+			<telefono>911257111</telefono>
+			<email>margaritamaria@correo.com</email>
+		</datos_contacto>
+		<datos_particular>
+			<nif>888888888A</nif>
+			<scan_data>./content/888888888A.jpg</scan_data>
+		</datos_particular>
+	</datos_propi>
+</propietariosas>

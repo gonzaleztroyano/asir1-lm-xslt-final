@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+
+<!-- Nombre del alumno:   Pablo González -->
+<!-- Curso del alumno:    1ºASIR (A) -->
+<!-- Fecha modificación:  15/05/2021 -->
+<!-- Version:             v4.0       -->
+<!--NOTAS
+		v4.0   -   Se actualiza el documento para añadir información sobre más alquileres y datos respecto a estos. 
+		v4.1   -   Añadir más inmuebles.
+-->
+
+<inmuebles xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="PracticaGlobal-XML2-PabloGonzalez-LM-1ASIR.xsd" inmobiliaria="VILLABLANCA">
+	<!--
+	<inmueble>
+		<datos_inmueble tipo_inmueble="" id_inmueble="">
+			<forma_adquisicion></forma_adquisicion>
+			<precio></precio>
+			<metros2></metros2>
+			<ubicacion>
+				<calle></calle>
+				<localidad></localidad>
+				<CCAA></CCAA>
+				<cod_postal></cod_postal>
+			</ubicacion>
+			<descripcion>
+				<n_habitaciones></n_habitaciones>
+				<n_banios></n_banios>
+				<luminosidad></luminosidad>
+				<terraza></terraza>
+				<amueblado></amueblado>
+				<calif_energetica></calif_energetica>
+			</descripcion>
+			<fotos_inmu></fotos_inmu>
+		</datos_inmueble>
+		<datos_propi id_propi="" tipo_propi="">
+			<nombre></nombre>
+			<apellidos></apellidos>
+			<datos_contacto>
+				<telefono></telefono>
+				<email></email>
+			</datos_contacto>
+			<datos_empresa>
+				<cif></cif>
+				<scan_data></scan_data>
+			</datos_empresa>
+			<datos_particular>
+				<nif></nif>
+				<scan_data></scan_data>
+			</datos_particular>
+		</datos_propi>
+		<datos_gestor id_emple="">
+			<datos_emple>
+				<telefono></telefono>
+				<email></email>
+			</datos_emple>
+			<foto_emple></foto_emple>
+			<disponibilidad>
+				<l-v-m></l-v-m>
+				<l-v-t></l-v-t>
+				<s-m></s-m>
+			</disponibilidad>
+		</datos_gestor>
+		<datos_subasta>
+			<puja id_puja="">
+				<cliente></cliente>
+				<timestamp></timestamp>
+				<cantidad></cantidad>
+			</puja>
+		</datos_subasta>
+	</inmueble>
+	-->
+	<inmueble>
+		<datos_inmueble tipo_inmueble="Vivienda" id_inmueble="v1">
+			<forma_adquisicion>Alquiler con 3 meses de fianza</forma_adquisicion>
+			<precio>700</precio>
+			<metros2>40</metros2>
+			<ubicacion>
+				<calle>Mayor, 1</calle>
+				<localidad>Madrid</localidad>
+				<CCAA>Comunidad de Madrid</CCAA>
+				<cod_postal>28001</cod_postal>
+			</ubicacion>
+			<descripcion>
+				<n_habitaciones>2</n_habitaciones>
+				<n_banios>1</n_banios>
+				<luminosidad>Alta</luminosidad>
+				<terraza>No</terraza>
+				<amueblado>Si</amueblado>
+				<calif_energetica>C</calif_energetica>
+			</descripcion>
+			<fotos_inmu>
+				<foto_inmu desc="PEPE">"./content/v1.png"</foto_inmu>
+			</fotos_inmu>
+		</datos_inmueble>
+		<datos_propi id_propi="p1" tipo_propi="Particular">
+			<nombre>Marta</nombre>
+			<apellidos>González Margarita</apellidos>
+			<datos_contacto>
+				<telefono>911257111</telefono>
+				<email>marta@correo.com</email>
+			</datos_contacto>
+			<datos_particular>
+				<nif>66666666A</nif>
+				<scan_data>./content/66666666A.jpg</scan_data>
+			</datos_particular>
+		</datos_propi>
+		<datos_gestor id_emple="e1">
+			<datos_emple>
+				<telefono>922222222</telefono>
+				<email>pepito@inmobiliaria.correo.com</email>
+			</datos_emple>
+			<foto_emple>./conent/e1.jpg</foto_emple>
+			<disponibilidad>
+				<l-v-m>Completa</l-v-m>
+				<l-v-t>Nunca</l-v-t>
+				<s-m>Ocasionalmente</s-m>
+			</disponibilidad>
+		</datos_gestor>
+		<datos_subasta>
+			<puja id_puja="v1-210222200125">
+				<cliente>Paquito</cliente>
+				<timestamp>
+					<dia>22</dia>
+					<mes>Febrero</mes>
+					<anio>2021</anio>
+					<hora>20:01:25</hora>
+				</timestamp>
+				<cantidad>600</cantidad>
+			</puja>
+			<puja id_puja="v1-210225143537">
+				<cliente>LOLI</cliente>
+				<timestamp>
+					<dia>25</dia>
+					<mes>Febrero</mes>
+					<anio>2021</anio>
+					<hora>14:35:37</hora>
+				</timestamp>
+				<cantidad>400</cantidad>
+			</puja>
+		</datos_subasta>
+	</inmueble>
+	<inmueble>
+		<datos_inmueble tipo_inmueble="Vivienda" id_inmueble="v2">
+			<forma_adquisicion>Alquiler con 5 meses de fianza</forma_adquisicion>
+			<precio>800</precio>
+			<metros2>50</metros2>
+			<ubicacion>
+				<calle>Mayor, 5</calle>
+				<localidad>Madrid</localidad>
+				<CCAA>Comunidad de Madrid</CCAA>
+				<cod_postal>28001</cod_postal>
+			</ubicacion>
+			<descripcion>
+				<n_habitaciones>2</n_habitaciones>
+				<n_banios>3</n_banios>
+				<luminosidad>Baja</luminosidad>
+				<terraza>No</terraza>
+				<amueblado>Si</amueblado>
+				<calif_energetica>C</calif_energetica>
+			</descripcion>
+			<fotos_inmu>
+				<foto_inmu desc="PEPE">./content/v2.jpg</foto_inmu>
+			</fotos_inmu>
+		</datos_inmueble>
+		<datos_propi id_propi="p2" tipo_propi="Particular">
+			<nombre>Pepito</nombre>
+			<apellidos>Pérez García</apellidos>
+			<datos_contacto>
+				<telefono>911111111</telefono>
+				<email>pepito@correo.com</email>
+			</datos_contacto>
+			<datos_particular>
+				<nif>55555555A</nif>
+				<scan_data>./content/55555555A.png</scan_data>
+			</datos_particular>
+		</datos_propi>
+		<datos_gestor id_emple="e2">
+			<datos_emple>
+				<telefono>922222222</telefono>
+				<email>manuela@inmobiliaria.correo.com</email>
+			</datos_emple>
+			<foto_emple>./content/e2.jpg</foto_emple>
+			<disponibilidad>
+				<l-v-m>Completa</l-v-m>
+				<l-v-t>Nunca</l-v-t>
+				<s-m>Ocasionalmente</s-m>
+			</disponibilidad>
+		</datos_gestor>
+		<datos_subasta>
+			<puja id_puja="v21-210222200125">
+				<cliente>Paquito</cliente>
+				<timestamp>
+					<dia>22</dia>
+					<mes>Febrero</mes>
+					<anio>2021</anio>
+					<hora>20:01:25</hora>
+				</timestamp>
+				<cantidad>600</cantidad>
+			</puja>
+			<puja id_puja="v2-210225143537">
+				<cliente>LOLI</cliente>
+				<timestamp>
+					<dia>25</dia>
+					<mes>Febrero</mes>
+					<anio>2021</anio>
+					<hora>14:35:37</hora>
+				</timestamp>
+				<cantidad>400</cantidad>
+			</puja>
+		</datos_subasta>
+	</inmueble>
+	<inmueble>
+		<datos_inmueble tipo_inmueble="Vivienda" id_inmueble="v3">
+			<forma_adquisicion>Alquiler con 5 meses de fianza</forma_adquisicion>
+			<precio>1200</precio>
+			<metros2>95</metros2>
+			<ubicacion>
+				<calle>Mayor, 25</calle>
+				<localidad>Madrid</localidad>
+				<CCAA>Comunidad de Madrid</CCAA>
+				<cod_postal>28001</cod_postal>
+			</ubicacion>
+			<descripcion>
+				<n_habitaciones>3</n_habitaciones>
+				<n_banios>4</n_banios>
+				<luminosidad>Alta</luminosidad>
+				<terraza>Sí</terraza>
+				<amueblado>Si</amueblado>
+				<calif_energetica>B</calif_energetica>
+			</descripcion>
+			<fotos_inmu>
+				<foto_inmu desc="PEPE">./content/v1.jpg</foto_inmu>
+			</fotos_inmu>
+		</datos_inmueble>
+		<datos_propi id_propi="p3" tipo_propi="Particular">
+			<nombre>Manolito</nombre>
+			<apellidos>García Aguado</apellidos>
+			<datos_contacto>
+				<telefono>919987885</telefono>
+				<email>manolito@correo.com</email>
+			</datos_contacto>
+			<datos_particular>
+				<nif>66668666A</nif>
+				<scan_data>./content/66668666A.jpg</scan_data>
+			</datos_particular>
+		</datos_propi>
+		<datos_gestor id_emple="e1">
+			<datos_emple>
+				<telefono>922222222</telefono>
+				<email>pepito@inmobiliaria.correo.com</email>
+			</datos_emple>
+			<foto_emple>./content/e2.jpg</foto_emple>
+			<disponibilidad>
+				<l-v-m>Completa</l-v-m>
+				<l-v-t>Nunca</l-v-t>
+				<s-m>Ocasionalmente</s-m>
+			</disponibilidad>
+		</datos_gestor>
+		<datos_subasta>
+			<puja id_puja="v3-210222200125">
+				<cliente>Paquito</cliente>
+				<timestamp>
+					<dia>22</dia>
+					<mes>Febrero</mes>
+					<anio>2021</anio>
+					<hora>20:01:25</hora>
+				</timestamp>
+				<cantidad>600</cantidad>
+			</puja>
+			<puja id_puja="v3-210225143537">
+				<cliente>Manuela</cliente>
+				<timestamp>
+					<dia>25</dia>
+					<mes>Febrero</mes>
+					<anio>2021</anio>
+					<hora>14:35:37</hora>
+				</timestamp>
+				<cantidad>1000</cantidad>
+			</puja>
+		</datos_subasta>
+	</inmueble>
+	<inmueble>
+		<datos_inmueble tipo_inmueble="Vivienda" id_inmueble="v5">
+			<forma_adquisicion>Venta</forma_adquisicion>
+			<precio>321000</precio>
+			<metros2>110</metros2>
+			<ubicacion>
+				<calle>Villablanca, 25</calle>
+				<localidad>Madrid</localidad>
+				<CCAA>Comunidad de Madrid</CCAA>
+				<cod_postal>28032</cod_postal>
+			</ubicacion>
+			<descripcion>
+				<n_habitaciones>3</n_habitaciones>
+				<n_banios>2</n_banios>
+				<luminosidad>Media</luminosidad>
+				<terraza>Sí</terraza>
+				<amueblado>Si</amueblado>
+				<calif_energetica>A</calif_energetica>
+			</descripcion>
+			<fotos_inmu>
+				<foto_inmu desc="PEPE">./content/v5.jpg</foto_inmu>
+			</fotos_inmu>
+		</datos_inmueble>
+		<datos_propi id_propi="p4" tipo_propi="Particular">
+			<nombre>Ana María Margarita</nombre>
+			<apellidos>Todos los Santos, de</apellidos>
+			<datos_contacto>
+				<telefono>911257111</telefono>
+				<email>margaritamaria@correo.com</email>
+			</datos_contacto>
+			<datos_particular>
+				<nif>88888888A.jpg</nif>
+				<scan_data>./content/88888888A.jpg</scan_data>
+			</datos_particular>
+		</datos_propi>
+		<datos_gestor id_emple="e8">
+			<datos_emple>
+				<telefono>922987222</telefono>
+				<email>josemanuel@inmobiliaria.correo.com</email>
+			</datos_emple>
+			<foto_emple>"./conent/e8.jpg"</foto_emple>
+			<disponibilidad>
+				<l-v-m>Nunca</l-v-m>
+				<l-v-t>Completa</l-v-t>
+				<s-m>Ocasionalmente</s-m>
+			</disponibilidad>
+		</datos_gestor>
+	</inmueble>
+	<inmueble>
+		<datos_inmueble tipo_inmueble="Vivienda" id_inmueble="v4">
+			<forma_adquisicion>Venta</forma_adquisicion>
+			<precio>253000</precio>
+			<metros2>85</metros2>
+			<ubicacion>
+				<calle>Mayor, 85</calle>
+				<localidad>Madrid</localidad>
+				<CCAA>Comunidad de Madrid</CCAA>
+				<cod_postal>28001</cod_postal>
+			</ubicacion>
+			<descripcion>
+				<n_habitaciones>3</n_habitaciones>
+				<n_banios>2</n_banios>
+				<luminosidad>Media</luminosidad>
+				<terraza>No</terraza>
+				<amueblado>Si</amueblado>
+				<calif_energetica>B</calif_energetica>
+			</descripcion>
+			<fotos_inmu>
+				<foto_inmu desc="PEPE">./content/v4.jpg</foto_inmu>
+			</fotos_inmu>
+		</datos_inmueble>
+		<datos_propi id_propi="p4" tipo_propi="Particular">
+			<nombre>Ana María Margarita</nombre>
+			<apellidos>Todos los Santos, de</apellidos>
+			<datos_contacto>
+				<telefono>911257111</telefono>
+				<email>margaritamaria@correo.com</email>
+			</datos_contacto>
+			<datos_particular>
+				<nif>888888888A</nif>
+				<scan_data>./content/888888888A.jpg</scan_data>
+			</datos_particular>
+		</datos_propi>
+		<datos_gestor id_emple="e8">
+			<datos_emple>
+				<telefono>922987222</telefono>
+				<email>josemanuel@inmobiliaria.correo.com</email>
+			</datos_emple>
+			<foto_emple>./conent/e8.jpg</foto_emple>
+			<disponibilidad>
+				<l-v-m>Nunca</l-v-m>
+				<l-v-t>Completa</l-v-t>
+				<s-m>Ocasionalmente</s-m>
+			</disponibilidad>
+		</datos_gestor>
+	</inmueble>
+</inmuebles>

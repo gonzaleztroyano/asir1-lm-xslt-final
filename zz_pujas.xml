@@ -1,0 +1,62 @@
+<pujas>
+	<puja id_puja="v1-210222200125">
+		<cliente>Paquito</cliente>
+		<timestamp>
+			<dia>22</dia>
+			<mes>Febrero</mes>
+			<anio>2021</anio>
+			<hora>20:01:25</hora>
+		</timestamp>
+		<cantidad>600</cantidad>
+	</puja>
+	<puja id_puja="v1-210225143537">
+		<cliente>LOLI</cliente>
+		<timestamp>
+			<dia>25</dia>
+			<mes>Febrero</mes>
+			<anio>2021</anio>
+			<hora>14:35:37</hora>
+		</timestamp>
+		<cantidad>400</cantidad>
+	</puja>
+	<puja id_puja="v21-210222200125">
+		<cliente>Paquito</cliente>
+		<timestamp>
+			<dia>22</dia>
+			<mes>Febrero</mes>
+			<anio>2021</anio>
+			<hora>20:01:25</hora>
+		</timestamp>
+		<cantidad>600</cantidad>
+	</puja>
+	<puja id_puja="v2-210225143537">
+		<cliente>LOLI</cliente>
+		<timestamp>
+			<dia>25</dia>
+			<mes>Febrero</mes>
+			<anio>2021</anio>
+			<hora>14:35:37</hora>
+		</timestamp>
+		<cantidad>400</cantidad>
+	</puja>
+	<puja id_puja="v3-210222200125">
+		<cliente>Paquito</cliente>
+		<timestamp>
+			<dia>22</dia>
+			<mes>Febrero</mes>
+			<anio>2021</anio>
+			<hora>20:01:25</hora>
+		</timestamp>
+		<cantidad>600</cantidad>
+	</puja>
+	<puja id_puja="v3-210225143537">
+		<cliente>Manuela</cliente>
+		<timestamp>
+			<dia>25</dia>
+			<mes>Febrero</mes>
+			<anio>2021</anio>
+			<hora>14:35:37</hora>
+		</timestamp>
+		<cantidad>1000</cantidad>
+	</puja>
+</pujas>
